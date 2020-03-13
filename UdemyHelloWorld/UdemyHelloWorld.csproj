@@ -47,6 +47,7 @@
     <Compile Include="Dump.cs" />
     <Compile Include="Enums\Season.cs" />
     <Compile Include="TestClasses\ControlFlow.cs" />
+    <Compile Include="TestClasses\Iterations.cs" />
     <Compile Include="TestClasses\ValueVsReferenceTypes.cs" />
     <Compile Include="Enums\ShippingMethod.cs" />
     <Compile Include="Program.cs" />
