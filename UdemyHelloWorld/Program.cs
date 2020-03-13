@@ -9,8 +9,10 @@ namespace UdemyHelloWorld
     {
         static void Main(string[] args)
         {
-            ControlFlow.ex1();
-
+            //ControlFlow.ex1();
+            //ControlFlow.ex2();
+            ControlFlow.ex3(); // no exception handling atm or validation
+            //ControlFlow.ex4();
         }
     }
 }

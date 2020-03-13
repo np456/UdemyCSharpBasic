@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms.VisualStyles;
 
 namespace UdemyHelloWorld.TestClasses
 {
@@ -45,5 +46,97 @@ namespace UdemyHelloWorld.TestClasses
 
         }
 
+        public static void ex2()
+        {
+
+            try {
+                
+                Console.WriteLine("Enter a interger");
+                var input1 = Convert.ToInt32(Console.ReadLine());
+
+            while (input1.GetType() != typeof(int))
+                {
+                    Console.WriteLine("Input must be an interger!");
+                    input1 = Convert.ToInt32(Console.ReadLine());
+            }
+
+                Console.WriteLine("Enter another interger");
+                var input2 = Convert.ToInt32(Console.ReadLine());
+
+            while (input2.GetType() != typeof(int))
+                {
+                    Console.WriteLine("Input must be an interger!");
+                    input1 = Convert.ToInt32(Console.ReadLine());
+            }
+
+                Console.WriteLine(Math.Max(input1, input2).ToString() + " is the larger interger");
+
+            }
+            catch(Exception)
+            {
+                Console.WriteLine("One of the numbers entered is not a valid interger");
+
+            }
+        }
+
+        public static void ex3()
+        {
+            // To 1.d.p
+            Console.Write("Enter width: ");
+            float width = Convert.ToInt16(Console.ReadLine());
+
+            Console.Write("Enter height: ");
+            float height = Convert.ToInt16(Console.ReadLine());
+
+            if (width < height)
+            {
+                Console.WriteLine(ImageOrientation.Vertical);
+            }
+            else if (height < width)
+            {
+                Console.WriteLine(ImageOrientation.Horizontal);
+            }
+            else
+            {
+                Console.WriteLine("Image can be both landscape and portrait");
+            }
+        }
+
+        public static void ex4()
+        {
+            Console.WriteLine("Please enter speed limit");
+            int speedLimit = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter speed car is travelling");
+            int carSpeed = Convert.ToInt32(Console.ReadLine());
+
+            int demeritPoints;
+            const int demeritThreshold = 5;
+
+            if (carSpeed <= speedLimit)
+            {
+                Console.WriteLine("OK");
+            }
+            else if (carSpeed > speedLimit)
+            {
+                var difference = carSpeed - speedLimit;
+
+                demeritPoints = difference / demeritThreshold;
+
+                if (demeritPoints > 12)
+                {
+                    Console.WriteLine("License suspended");
+                }
+                else
+                    Console.WriteLine("Number of demerit points: "+ demeritPoints.ToString());
+                
+
+            }
+            else
+            {
+                Console.WriteLine("Invalid input");
+            }
+
+        }
     }
 }
