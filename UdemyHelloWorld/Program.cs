@@ -14,8 +14,13 @@ namespace UdemyHelloWorld
             //ControlFlow.ex3(); // no exception handling atm or validation
             //ControlFlow.ex4();
 
-            Iterations.stringIterEx(); // always for string/array type objects
-
+            //Iterations.stringIterEx(); // always for string/array type objects
+            //Iterations.randomIterationEx();
+            //Iterations.ex1();
+            //Iterations.ex2();
+            //Iterations.ex3();
+            //Iterations.ex4();
+            Iterations.ex5();
         }
     }
 }
