@@ -20,7 +20,14 @@ namespace UdemyHelloWorld
             //Iterations.ex2();
             //Iterations.ex3();
             //Iterations.ex4();
-            Iterations.ex5();
+            //Iterations.ex5();
+
+            //ArraysAndLists.ArrayEx();
+            //ArraysAndLists.ListEx();
+            //ArraysAndLists.ex1();
+            //ArraysAndLists.ex2();
+            //ArraysAndLists.ex3();
+            ArraysAndLists.ex4();
         }
     }
 }
