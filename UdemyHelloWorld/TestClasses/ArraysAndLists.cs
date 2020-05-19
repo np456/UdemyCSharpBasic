@@ -180,7 +180,72 @@ namespace UdemyHelloWorld.TestClasses
                 if(numbers.Any())
                     Console.Write(item + ", ");
             }
-            
+  
+        }
+
+        public static void ex5()
+        {
+            Console.WriteLine("Enter list of comma seperated numbers e.g. 5,1,9,2,10");
+
+            var input = Console.ReadLine();
+            string pattern = "^[0-9]+(,[0-9]+)*$";
+
+            Regex rx = new Regex(pattern, RegexOptions.IgnoreCase);
+            MatchCollection matches = rx.Matches(pattern);
+
+            int numberOfCommas = 0;
+
+            if (rx.IsMatch(input))
+            {
+                foreach (var c in input)
+                {
+                    if (c == ',')
+                    {
+                        numberOfCommas++;
+                    }
+                    
+                }
+
+                if (numberOfCommas >= 4 && !String.IsNullOrWhiteSpace(input))
+                {
+                    var stringInput = input.Split(',');
+                    var converted = (stringInput.Select(int.Parse)).OrderBy(n=>n);
+                    //converted.OrderBy(n => n);
+
+                    //int[] myInts = Array.ConvertAll(stringInput, s => int.Parse(s));
+                    //myInts.OrderBy(n => n); doesernt work but no error because using too much var, NEED TO BE CAREFUL OF WORKING WITH ENUMERABLES VS ARRAYS!!
+
+
+                    foreach (var item in stringInput)
+                    {
+                        //Int32.TryParse(stringInput[Convert.ToInt32(item)], out int _);
+                        //Int32.Parse(item) = item;
+                        //Convert.ToInt32(item);
+                        //Console.WriteLine(item);
+                        //Console.WriteLine(item.GetType());
+                        //stringInput[item];
+
+                        //var itemAsNumber = Convert.ToInt32(item);   //HAVE TO STORE IT IN VARIABLE OTHERWISE IT KEEPS STICKING AS STRING NO WONDER
+                        // CANT USE INDEX BECAUSE FOREACH IS NOT THE SAME AS FOR LOOP!
+                        
+
+                        //dumbass, tryparse is not actually converting for you!!
+                    }
+
+                    //for (int i = 0; i < stringInput.Length; i++)
+                    //{
+                        //int num = Convert.ToInt32(stringInput[i]);
+                        //stringInput[i] = num;
+                    //}
+
+                    
+                    Console.WriteLine($"Smallest numbers in asc order: {converted.First()}, {converted.Skip(1).First()}, {converted.Skip(2).First()}");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Invalid list, please re-enter numbers");
+            }
 
 
         }

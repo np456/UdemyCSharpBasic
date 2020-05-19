@@ -27,7 +27,8 @@ namespace UdemyHelloWorld
             //ArraysAndLists.ex1();
             //ArraysAndLists.ex2();
             //ArraysAndLists.ex3();
-            ArraysAndLists.ex4();
+            //ArraysAndLists.ex4();
+            ArraysAndLists.ex5();
         }
     }
 }
