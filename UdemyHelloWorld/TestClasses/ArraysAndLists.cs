@@ -175,6 +175,8 @@ namespace UdemyHelloWorld.TestClasses
             //    if(!rx.IsMatch(input))
             //}
 
+            //var isNumber2 = input is int;  // try later
+
             foreach (var item in numbers.Distinct())
             {
                 if(numbers.Any())
