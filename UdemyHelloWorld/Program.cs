@@ -28,7 +28,14 @@ namespace UdemyHelloWorld
             //ArraysAndLists.ex2();
             //ArraysAndLists.ex3();
             //ArraysAndLists.ex4();
-            ArraysAndLists.ex5();
+            //ArraysAndLists.ex5();
+
+            //DateTimeEx.Notes();
+
+            //Strings.stringDemo();
+            //Strings.summarisingText();
+            //Strings.StringBuilderEx();
+            Strings.Ex1();
         }
     }
 }

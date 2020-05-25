@@ -48,7 +48,9 @@
     <Compile Include="Enums\Season.cs" />
     <Compile Include="TestClasses\ArraysAndLists.cs" />
     <Compile Include="TestClasses\ControlFlow.cs" />
+    <Compile Include="TestClasses\DateTimeEx.cs" />
     <Compile Include="TestClasses\Iterations.cs" />
+    <Compile Include="TestClasses\Strings.cs" />
     <Compile Include="TestClasses\ValueVsReferenceTypes.cs" />
     <Compile Include="Enums\ShippingMethod.cs" />
     <Compile Include="Program.cs" />
