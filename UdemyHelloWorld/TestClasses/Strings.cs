@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace UdemyHelloWorld.TestClasses
 {
@@ -173,6 +174,47 @@ namespace UdemyHelloWorld.TestClasses
             //    Console.WriteLine("Consecutive");
 
         }
+
+        public static void Ex2()
+        {
+            Console.WriteLine("Enter numbers seperated by hyphen: ");
+            var input = Console.ReadLine().Trim();
+
+            if (input == "")
+            {
+                System.Environment.Exit(0);
+            }
+
+            string[] chars = input.Split('-');
+
+            bool isConsecutive;
+
+            for (int i = 1; i < chars.Length; i++)
+            {
+
+                if (Convert.ToInt32(chars[i]) != Convert.ToInt32(chars[i - 1]) + 1)
+                {
+                    isConsecutive = false;
+                    Console.WriteLine("Not consecutive");
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Consecutive");
+                    break;
+
+                }
+            }
+
+            //if (isConsecutive == true)
+            //{
+            //    Console.WriteLine("Consecutive");
+            //}
+
+
+
+        }
+
 
     }
 }

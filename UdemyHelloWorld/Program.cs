@@ -35,7 +35,8 @@ namespace UdemyHelloWorld
             //Strings.stringDemo();
             //Strings.summarisingText();
             //Strings.StringBuilderEx();
-            Strings.Ex1();
+            //Strings.Ex1();
+            Strings.Ex2();
         }
     }
 }
